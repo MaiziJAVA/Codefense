@@ -1,0 +1,52 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "choose.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "RzPanel"
+#pragma link "RzButton"
+#pragma resource "*.dfm"
+TFchoose *Fchoose;
+//---------------------------------------------------------------------------
+__fastcall TFchoose::TFchoose(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TFchoose::easyClick(TObject *Sender)
+{
+	gameLevel ="easy";
+    Fchoose->Hide();
+    Fmenu->Show();
+    (*Fmenu).gameLevel = gameLevel;
+    Fmenu->BitBtn1->Enabled =true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFchoose::normalClick(TObject *Sender)
+{
+ 	gameLevel ="normal";
+    Fchoose->Hide();
+    Fmenu->Show();
+    (*Fmenu).gameLevel = gameLevel;
+    Fmenu->BitBtn1->Enabled =true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFchoose::difficultClick(TObject *Sender)
+{
+	gameLevel ="difficult";
+    Fchoose->Hide();
+    Fmenu->Show();
+    (*Fmenu).gameLevel = gameLevel;
+    Fmenu->BitBtn1->Enabled =true;
+}
+//---------------------------------------------------------------------------
+
+
+
